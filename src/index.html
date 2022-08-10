@@ -1,13 +1,21 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-  <title>WeatherFrontend</title>
+  <title>Abakus</title>
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/layout/images/logo.svg">
+
+  <link id="theme-css" rel="stylesheet" type="text/css" href="assets/theme/theme-blue.css">
+  <link id="layout-css" rel="stylesheet" type="text/css" href="assets/layout/css/layout-blue.css">
 </head>
-<body>
-  <app-root></app-root>
+<body class="main-body">
+<app-root>
+  <div class="splash-screen">
+    <div class="splash-loader"></div>
+    <img class="splash-logo" src="assets/layout/images/morpheus-logo-white.svg"/>
+  </div>
+</app-root>
 </body>
 </html>
