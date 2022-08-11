@@ -6,14 +6,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import {CalendarModule} from "primeng/calendar";
+import {SelectButtonModule} from "primeng/selectbutton";
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+      {path: '', component: ProductListComponent},
+    ]),
+    CalendarModule,
+    SelectButtonModule,
+    AutoCompleteModule
   ],
   declarations: [
     AppComponent,
@@ -27,8 +33,3 @@ import { ProductListComponent } from './product-list/product-list.component';
 export class AppModule { }
 
 
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
