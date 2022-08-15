@@ -1,24 +1,28 @@
-<link rel="stylesheet" href="app.component.css">
-<link rel="stylesheet" href="styles.css">
-<link rel="script" href="app.component.ts">
-<link rel="stylesheet" href="frontend-background/weather-frontend.html">
-<link rel="stylesheet" href="frontend-background/weather-frontend.css">
-<link rel="script" href="frontend-background/weather-frontend.ts">
-
 
 <h1>Country Info</h1>
+<div>
 
 
-<div ng-app="">
-  <p>Country: <input type="text" ng-model="name" placeholder= "Country name" ></p>
-  <p ng-bind="name"></p>
-  <button type="button" class="btn btn-warning" onclick="document.getElementById('clock').innerHTML = Date()">Click me to display Date and Time.</button>
-  <p id="clock"></p>
+
+  <div>
+    <input type="text" pInputText [(ngModel)]="country"/>
+
+  <p-button type="button" label="Danger" class="p-button-danger" onclick="" >  Get Country Info </p-button>
+  <p-button id="delete" type="button"  label="success" class="p-button-success" onclick="deleteIndex()"> Clear </p-button>
+
+    <p-button label="Click" ></p-button>
+  </div>
+
+
+
+
 </div>
 
 
+<div> <button type="button" pButton label="Warning" class="p-button-warning" onclick="document.getElementById('clock').innerHTML = Date()">Click me to display Date and Time.</button>
+  <p id="clock"></p></div>
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="./bootstrap.js"></script>
+
+

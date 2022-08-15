@@ -1,35 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import {ButtonModule} from 'primeng/button';
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CalendarModule} from "primeng/calendar";
 import {SelectButtonModule} from "primeng/selectbutton";
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {AccordionModule} from 'primeng/accordion';
+import  {DropdownModule} from 'primeng/dropdown';
+import  {InputTextModule} from "primeng/inputtext";
 
-@NgModule({
+
+@NgModule ({
+  declarations: [
+    AppComponent,
+
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path: '', component: ProductListComponent},
-    ]),
     CalendarModule,
-    SelectButtonModule,
-    AutoCompleteModule
+    ReactiveFormsModule,
+    DropdownModule,
+    InputTextModule,
+    FormsModule,
+    ButtonModule,
+
   ],
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
-
-
+  export class AppModule { }
